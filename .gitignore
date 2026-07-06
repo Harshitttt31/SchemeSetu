@@ -1,5 +1,8 @@
 .env
 data/index/
+# Local build artifacts actually live under api/data/ (root pattern above is anchored)
+api/data/index/
+api/data/emb_cache.jsonl
 __pycache__/
 node_modules/
 web/dist/

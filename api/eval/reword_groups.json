@@ -1,0 +1,34 @@
+[
+  {
+    "intent": "mudra_categories",
+    "phrasings": [
+      "What are the loan categories under MUDRA / PMMY?",
+      "List the types of Mudra loans and how they are classified.",
+      "Under Pradhan Mantri Mudra Yojana, what are the different loan stages a borrower can get?"
+    ]
+  },
+  {
+    "intent": "udyam_registration",
+    "phrasings": [
+      "How do I register for Udyam (MSME registration)?",
+      "What is the process to get a Udyam registration number?",
+      "Explain how a small business registers itself on the Udyam portal."
+    ]
+  },
+  {
+    "intent": "startup_80iac_tax",
+    "phrasings": [
+      "What is the 80-IAC income tax exemption for startups?",
+      "How can a recognised startup claim the three-year tax holiday under section 80-IAC?",
+      "Tell me about the 80 IAC tax benefit for startups and who is eligible."
+    ]
+  },
+  {
+    "intent": "standup_eligibility",
+    "phrasings": [
+      "Who is eligible for a Stand-Up India loan?",
+      "What are the eligibility criteria to apply under the Stand-Up India scheme?",
+      "Can an SC/ST or woman entrepreneur apply for Stand-Up India, and what conditions must they meet?"
+    ]
+  }
+]
