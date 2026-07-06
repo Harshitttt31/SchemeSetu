@@ -1,0 +1,8 @@
+.env
+data/index/
+__pycache__/
+node_modules/
+web/dist/
+
+# Python virtual environment
+.venv/

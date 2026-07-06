@@ -1,0 +1,10 @@
+{
+  "startup_india_notification.pdf": {
+    "source_url": "https://www.startupindia.gov.in/content/dam/invest-india/Templates/public/<official-file>.pdf",
+    "retrieved_on": "2026-07-01"
+  },
+  "mudra_guidelines.pdf": {
+    "source_url": "https://www.mudra.org.in/<official-file>.pdf",
+    "retrieved_on": "2026-07-01"
+  }
+}

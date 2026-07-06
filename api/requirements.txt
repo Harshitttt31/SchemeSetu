@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+google-genai
+chromadb
+pypdf
+pdfplumber
+python-dotenv
+ragas
+numpy
+pandas
