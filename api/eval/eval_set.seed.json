@@ -1,0 +1,77 @@
+{
+  "observed_top_hit_score_range": {
+    "n_queries": 12,
+    "min": 0.6784082651138306,
+    "mean": 0.7374705423911413,
+    "max": 0.7690472602844238
+  },
+  "rows": [
+    {
+      "intent": "mudra_categories",
+      "question": "What are the loan categories under MUDRA / PMMY?",
+      "variants": [
+        "What are the loan categories under MUDRA / PMMY?",
+        "List the types of Mudra loans and how they are classified.",
+        "Under Pradhan Mantri Mudra Yojana, what are the different loan stages a borrower can get?"
+      ],
+      "relevant_chunk_ids": [
+        "mudraloan_salientfeatures_english_p1_c0",
+        "mudraloan_salientfeatures_english_p2_c0",
+        "mudraloan_salientfeatures_english_p3_c0"
+      ],
+      "primary_chunk_id": "mudraloan_salientfeatures_english_p1_c0",
+      "verdict": "STABLE",
+      "reference_answer": "",
+      "note": "Harvested by reword_sweep; verify the anchor text before trusting."
+    },
+    {
+      "intent": "udyam_registration",
+      "question": "How do I register for Udyam (MSME registration)?",
+      "variants": [
+        "How do I register for Udyam (MSME registration)?",
+        "What is the process to get a Udyam registration number?",
+        "Explain how a small business registers itself on the Udyam portal."
+      ],
+      "relevant_chunk_ids": [
+        "faq_udyam_registration_dated_8_july_2024_p1_c0",
+        "faq_udyam_registration_dated_8_july_2024_p2_c0",
+        "faq_udyam_registration_dated_8_july_2024_p5_c0"
+      ],
+      "primary_chunk_id": "faq_udyam_registration_dated_8_july_2024_p1_c0",
+      "verdict": "STABLE",
+      "reference_answer": "",
+      "note": "Harvested by reword_sweep; verify the anchor text before trusting."
+    },
+    {
+      "intent": "startup_80iac_tax",
+      "question": "What is the 80-IAC income tax exemption for startups?",
+      "variants": [
+        "What is the 80-IAC income tax exemption for startups?",
+        "How can a recognised startup claim the three-year tax holiday under section 80-IAC?",
+        "Tell me about the 80 IAC tax benefit for startups and who is eligible."
+      ],
+      "relevant_chunk_ids": [
+        "198117_p9_c1",
+        "198117_p7_c0"
+      ],
+      "primary_chunk_id": "198117_p9_c1",
+      "verdict": "STABLE",
+      "reference_answer": "",
+      "note": "Harvested by reword_sweep; verify the anchor text before trusting."
+    },
+    {
+      "intent": "standup_eligibility",
+      "question": "Who is eligible for a Stand-Up India loan?",
+      "variants": [
+        "Who is eligible for a Stand-Up India loan?",
+        "What are the eligibility criteria to apply under the Stand-Up India scheme?",
+        "Can an SC/ST or woman entrepreneur apply for Stand-Up India, and what conditions must they meet?"
+      ],
+      "relevant_chunk_ids": [],
+      "primary_chunk_id": null,
+      "verdict": "PENDING_CORPUS",
+      "reference_answer": "",
+      "note": "Stand-Up India source is deferred (portal 503) and NOT indexed. The sweep's mechanical 'STABLE' anchor was mudraloan_salientfeatures_english_p1_c0 -- a MUDRA chunk, i.e. a spurious topical neighbour, NOT a real Stand-Up label. No label harvested. Re-run the sweep to relabel once the Stand-Up PDF is added to the corpus."
+    }
+  ]
+}

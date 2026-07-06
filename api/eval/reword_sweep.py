@@ -29,6 +29,7 @@ import json
 import logging
 import statistics
 import sys
+import time
 from pathlib import Path
 
 # Make the sibling `rag` package importable no matter how this file is launched
@@ -44,8 +45,21 @@ from rag.retrieve import search            # noqa: E402
 logger = logging.getLogger(__name__)
 
 TOP_N = 3                                   # "top-3" per the acceptance definition
+QUERY_GAP = 13.0                            # secs between query embeds -> under free-tier RPM
 DEFAULT_GROUPS = Path(__file__).with_name("reword_groups.json")
 DEFAULT_SEED_OUT = Path(__file__).with_name("eval_set.seed.json")
+
+_first_embed = True
+
+
+def paced_embed_query(text: str, client):
+    """Embed a query variant, spacing requests so each stays under the free-tier
+    per-minute ceiling (a burst of 12 back-to-back embeds otherwise 429s)."""
+    global _first_embed
+    if not _first_embed:
+        time.sleep(QUERY_GAP)
+    _first_embed = False
+    return embed_query(text, client=client)
 
 
 def load_groups(path: Path) -> list[dict]:
@@ -95,7 +109,7 @@ def sweep_group(group: dict, collection, genai_client) -> dict:
     """
     variants: list[dict] = []
     for phrasing in group["phrasings"]:
-        emb = embed_query(phrasing, client=genai_client)
+        emb = paced_embed_query(phrasing, client=genai_client)
         hits = search(collection, emb, TOP_N)
         variants.append({"question": phrasing, "hits": hits})
 
